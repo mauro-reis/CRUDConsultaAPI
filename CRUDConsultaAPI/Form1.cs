@@ -113,7 +113,7 @@ namespace CRUDConsultaAPI
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(URL);
-                HttpResponseMessage responseMessage = await client.DeleteAsync(URL + IdPessoa);
+                HttpResponseMessage responseMessage = await client.DeleteAsync(URL + "/" + IdPessoa);
                 if (responseMessage.IsSuccessStatusCode)
                 {
                     MessageBox.Show("Pessoa " + txtNome.Text + "de Id " + txtID.Text + " deletada com sucesso.");
